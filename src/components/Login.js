@@ -3,12 +3,13 @@ import React, { useState } from "react";
 export const Login = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassward] = useState('');
-    const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(email);
+        console.log(email)
+        console.log(password);
     }
 
     return (
