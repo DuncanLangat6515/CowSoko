@@ -1,10 +1,11 @@
 import React,{useState} from "react";
+import {useNavigate} from 'react-router-dom'
 
 function NewCow() {
     const [name, setName] = useState("");
     const [image, setImage] = useState("");
     const [price, setPrice] = useState("");
-
+    const nav=useNavigate()
     function handleSubmit(e) {
         e.preventDefault();
         fetch("/cows", {
@@ -18,6 +19,9 @@ function NewCow() {
             price: price,
           }),
         });
+      }
+      function handleClick(){
+          nav('/')
       }
       return (
         <div className="new-cow-form">
@@ -44,7 +48,7 @@ function NewCow() {
               value={price}
               onChange={(e) => setPrice(parseFloat(e.target.value))}
             />
-            <button type="submit">Sell Cow</button>
+            <button onClick={handleClick} type="submit">Add Cow</button>
           </form>
         </div>
       );
