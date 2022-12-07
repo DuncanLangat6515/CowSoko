@@ -26,7 +26,7 @@ function NewCow() {
             <input
               type="text"
               name="name"
-              placeholder="Cow name"
+              placeholder="Cow breed"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -44,7 +44,7 @@ function NewCow() {
               value={price}
               onChange={(e) => setPrice(parseFloat(e.target.value))}
             />
-            <button type="submit">Post Cow</button>
+            <button type="submit">Sell Cow</button>
           </form>
         </div>
       );
