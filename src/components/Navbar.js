@@ -1,15 +1,15 @@
-function Navbar({ onLogout }) {
-    function handleLogout() {
-      fetch("/logout", {
-        method: "DELETE",
-      }).then(() => onLogout());
-    }
-  
-    return (
-      <header>
-        <button onClick={handleLogout}>Logout</button>
-      </header>
-    );
-  }
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+function Navbar() {
+  return (
+    <div className='navbar'>
+      <Link to="/">Home</Link>
+      <Link to="/login">Login</Link>
+      <Link to="/signup">Signup</Link>
+      <Link to="/addcow">Add Cow</Link>
+    </div>
+  )
+}
 
 export default Navbar
