@@ -1,21 +1,25 @@
 import React, { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import './App.css';
-import { Login } from "./components/Login";
-import { Signup } from "./components/Signup";
+import {Signup}  from "./components/Signup";
+import Navbar from "./components/Navbar";
+import  {Login}  from "./components/Login";
+import Home from "./components/Home"
 import NewCow from "./components/NewCow";
 
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
 
-  const toggleForm = (formName) => {
-    setCurrentForm(formName);
-  }
-
   return (
     <div className="App">
-      {
-        currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Signup onFormSwitch={toggleForm} />
-      }
+      <Navbar/>
+      <Routes>
+        <Route exact path="/" element={<Home/>}/>
+        <Route exact path="/login" element={<Login/>}/>
+        <Route exact path="/signup" element={<Signup/>}/>
+        {/* <Route exact path="/logout" element={<Logout/>}/> */}
+        <Route exact path="/addcow" element={<NewCow/>}/>
+      </Routes>
     </div>
   );
 }
