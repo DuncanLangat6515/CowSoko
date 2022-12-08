@@ -18,10 +18,12 @@ function NewCow() {
             image: image,
             price: price,
           }),
-        });
-      }
-      function handleClick(){
-          nav('/')
+        })
+        .then(r=>{
+          if(r.ok){
+            nav('/')
+          }
+        })
       }
       return (
         <div className="new-cow-form">
@@ -48,7 +50,7 @@ function NewCow() {
               value={price}
               onChange={(e) => setPrice(parseFloat(e.target.value))}
             />
-            <button onClick={handleClick} type="submit">Add Cow</button>
+            <button type="submit">Add Cow</button>
           </form>
         </div>
       );
