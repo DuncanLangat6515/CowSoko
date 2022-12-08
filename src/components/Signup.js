@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export const Signup = (props) => {
+export const Signup = () => {
     const [username, setName] = useState('');
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
-
+    const [errors, setErrors] = useState([]);
+    const nav=useNavigate()
 
 
     const handleSubmit = (e) => {
@@ -20,14 +22,16 @@ export const Signup = (props) => {
             password_confirmation:passwordConfirmation })
         })
         .then((res) => {
-            if (res.ok) {
-              res.json().then((data) => console.log(data));
-            }
-            else {
-                res.json().then(err=>console.log(err))
-            }
-          })
-      };
+          if (res.ok) {
+            res.json().then((data) => console.log(data));
+            // setLoggedIn(()=>true)
+            nav('/login')
+          }
+          else {
+            res.json().then((err) => setErrors(err.errors));
+          }
+        })
+    };
 
     return (
         <div className="auth-form-container">
@@ -40,6 +44,11 @@ export const Signup = (props) => {
             <label htmlFor="password">Password Confirmation</label>
         <input type="password" id="password_confirmation" value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}/> 
         <button type="submit" class="btn btn-outline-success">Sign Up</button>
+        <formField>
+        {errors?.map((err) => (
+          <error key={err}>{err}</error>
+        ))}
+      </formField>
         </form>
     </div>
     )
