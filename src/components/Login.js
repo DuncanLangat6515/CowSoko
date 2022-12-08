@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-export const Login = (props) => {
+import { useNavigate } from "react-router-dom";
+export const Login = () => {
   const [username, setUsername] = useState(null);
   const [password, setPassward] = useState("");
+  const [errors, setErrors] = useState([]);
+  const nav=useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,9 +18,10 @@ export const Login = (props) => {
     .then((res) => {
         if (res.ok) {
           res.json().then((data) => console.log(data));
+          nav('/')
         }
         else {
-            res.json().then(err=>console.log(err))
+          res.json().then((err) => setErrors(err.errors));
         }
       })
   };
@@ -44,14 +48,13 @@ export const Login = (props) => {
           id="password"
           name="password"
         />
-        <button type="submit">Log In</button>
+      <button type="submit">Log In</button>
+      <formField>
+        {errors?.map((err) => (
+          <error key={err}>{err}</error>
+        ))}
+      </formField>
       </form>
-      <button
-        className="link-btn"
-        onClick={() => props.onFormSwitch("register")}
-      >
-        Don't have an account? Register here.
-      </button>
     </div>
   );
 };
