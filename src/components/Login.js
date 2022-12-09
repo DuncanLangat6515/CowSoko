@@ -8,7 +8,7 @@ export const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("/login", {
+    fetch("https://cow-soko-production.up.railway.app/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -11,7 +11,7 @@ export const Signup = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch("/signup", {
+        fetch("https://cow-soko-production.up.railway.app/signup", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

@@ -7,7 +7,7 @@ function Home({cows, handleDelete}) {
 
 function handleUpdate(id){
 let price = parseInt(prompt('Price input'));
-  fetch(`/cows/${id}`,{
+  fetch(`https://cow-soko-production.up.railway.app/cows/${id}`,{
     method:'PATCH',
     headers:{
       'Content-Type':'application/json'

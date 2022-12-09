@@ -8,7 +8,7 @@ function NewCow() {
     const nav=useNavigate()
     function handleSubmit(e) {
         e.preventDefault();
-        fetch("/cows", {
+        fetch("https://cow-soko-production.up.railway.app/cows", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
