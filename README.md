@@ -16,9 +16,9 @@
 CowSoko is dairy farming where a buyer and seller can post their cow on sell and can also book the
 cow they want. This will reduce time and traveling expense since you can check it online
 
-### Link BACKEND  https://cow-soko-production.up.railway.app/cows
+### Backend Deployed Link: https://cow-soko-production.up.railway.app
 
-### Backend Github Link https://github.com/DuncanLangat6515/CowSoko-backend 
+### Backend Github Link:  https://github.com/DuncanLangat6515/CowSoko-backend 
 
 ## Licence
 MIT License
@@ -26,7 +26,7 @@ MIT License
 Copyright (c) [2019] [DuncanLangat6515]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
+R
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Softw
 
 [Go back to the top](#Cow-soko)
