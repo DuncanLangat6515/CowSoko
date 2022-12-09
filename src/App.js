@@ -14,7 +14,7 @@ function App() {
   const [newData, setNewData] = useState(false);
 
   useEffect(()=>{
-      fetch('/cows')
+      fetch("https://cow-soko-production.up.railway.app/cows")
       .then(r=>r.json())
       .then(data=>{
           setCows(data)
@@ -23,7 +23,7 @@ function App() {
   
   function handleDelete(id){
     console.log(id)
-    fetch(`/cows/${id}`,{
+    fetch(`https://cow-soko-production.up.railway.app/cows/${id}`,{
       method: "DELETE",
     })
     .then(res=>res.json())
