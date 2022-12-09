@@ -2,7 +2,7 @@
   "name": "cow-soko",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3000",
+  "proxy": "https://cow-soko-production.up.railway.app",
   "dependencies": {
     "@headlessui/react": "^1.7.4",
     "@heroicons/react": "^2.0.13",
