@@ -6,6 +6,7 @@ import  {Login}  from "./components/Login";
 import Home from "./components/Home"
 import NewCow from "./components/NewCow";
 import React, { useEffect, useState } from 'react'
+import Display from "./components/Display";
 
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
@@ -40,7 +41,8 @@ function App() {
     <div className="App">
       <Navbar/>
       <Routes>
-        <Route exact path="/" element={<Home cows={cows} handleDelete={handleDelete}/>}/>
+      <Route exact path="/" element={<Display/>}/>
+        <Route exact path="/home" element={<Home cows={cows} handleDelete={handleDelete}/>}/>
         <Route exact path="/login" element={<Login/>}/>
         <Route exact path="/signup" element={<Signup/>}/>
         {/* <Route exact path="/logout" element={<Logout/>}/> */}
