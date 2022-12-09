@@ -143,3 +143,6 @@ label {
 span{
   color:rgb(18, 159, 235);
 }
+.display img{
+  justify-content: space-between;
+}
