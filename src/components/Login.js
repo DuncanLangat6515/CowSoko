@@ -18,7 +18,7 @@ export const Login = () => {
     .then((res) => {
         if (res.ok) {
           res.json().then((data) => console.log(data));
-          nav('/')
+          nav('/home')
         }
         else {
           res.json().then((err) => setErrors(err.errors));
