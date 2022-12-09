@@ -21,7 +21,7 @@ function NewCow() {
         })
         .then(r=>{
           if(r.ok){
-            nav('/')
+            nav('/home')
           }
         })
       }
