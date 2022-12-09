@@ -17,12 +17,16 @@
   justify-content: space-between;
   border-bottom: .1vw solid grey;
   background: white;
+  
 }
 
 .navbar>a {
   text-decoration: none;
   color: black;
-
+  width:40%;
+  font-weight: 500;
+  box-sizing: border-box;
+  
 }
 
 .navbar>a:hover {
@@ -114,4 +118,28 @@ label {
 
 .new-cow-form button {
   width: 150px;
+}
+
+.display{
+  margin-top: 150px;
+
+}
+.display >p{
+  padding-top: 50px;
+  font-size: 20px;
+  font-weight: 500px;
+}
+
+.display ul{
+  list-style: none;
+}
+.display li{
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  font-weight: 400px;
+  
+}
+span{
+  color:rgb(18, 159, 235);
 }
