@@ -18,6 +18,8 @@ cow they want. This will reduce time and traveling expense since you can check i
 
 ### Link BACKEND  https://cow-soko-production.up.railway.app/cows
 
+### Backend Github Link https://github.com/DuncanLangat6515/CowSoko-backend 
+
 ## Licence
 MIT License
 
